@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- FIXME:
+        - Opera adds list markers to dates in <li>'s
+        - IE seems to clear date floats, which means that the headers don't
+          line up with the dates
+        - Add valid XHTML 1.0 strict / CSS 2.1 links on screen versions only
+        - Jobmine messes with whitespace, so my beautiful indentation is no more
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Ronuk Raval</title>
+        <style type="text/css" media="all">
+            body {
+                padding: 1em;
+                line-height: 1.6em;
+                font-family: Palatino, Palatino Linotype, Georgia, serif;
+            }
+
+            div.inner-pad {
+                padding: 0px 2.5em;
+            }
+
+            hr { clear: both; }
+
+            h1 {
+                text-align: center;
+                margin: 0.3em 0px;
+                font-variant: small-caps;
+            }
+
+            h2 {
+                font-variant: small-caps;
+                clear: both;
+                margin: 1em 0px 0.3em 0px;
+            }
+
+            h3 {
+                font-size: 100%;
+                font-weight: bold;
+                margin: 0px;
+            }
+
+            ul.undertitle {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                line-height: normal;
+            }
+
+            ul.address {
+                list-style-type: none;
+                width: 50%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            ul.float-right {
+                text-align: right;
+                float: right;
+            }
+
+            ul.address > li {
+                line-height: normal;
+            }
+
+            ul.address > li.header {
+                font-variant: small-caps;
+                font-size: 120%;
+                line-height: 1.6em;
+                font-weight: bold;
+            }
+
+            ul.section {
+                margin: 0px 0px 0.6em 0px;
+            }
+
+            p.section {
+                clear: both;
+                margin: 0px 0px 0.6em 0px;
+            }
+
+            p.header {
+                font-weight: bold;
+            }
+
+            p.date {
+                float: right;
+                margin: 0px;
+                font-style: italic;
+            }
+
+            span.header {
+                font-weight: bold;
+            }
+
+            span.date {
+                font-style: italic;
+            }
+
+            a, a:visited {
+                color: #000000;
+                text-decoration: underline;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            a.fixed-width {
+                font-family: monospace;
+            }
+
+            table {
+                border-width: 0px;
+            }
+        </style>
+
+        <style type="text/css" media="screen">
+            .endnote {
+                display: none;
+            }
+        </style>
+
+        <style type="text/css" media="print">
+            .endnote {
+                font-family: monospace;
+                display: inline;
+            }
+
+            div.endnote {
+                display: block;
+                line-height: normal;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ronuk Raval</h1>
+        <ul class="undertitle">
+            <li>2B Computer Science with Digital Hardware Option</li>
+            <li>Phone: (519) 722-3062</li>
+            <li>E-mail: <a class="fixed-width" href="mailto:ronuk.raval@gmail.com">ronuk.raval@gmail.com</a></li>
+            <li>Website: <a class="fixed-width" href="http://zeroindexed.com">http://zeroindexed.com</a></li>
+        </ul>
+        <div class="inner-pad">
+            <ul class="address float-right">
+                <li class="header">Permanent Address</li>
+                <li>5999 Cherrywood Pl.</li>
+                <li>Mississauga, Ontario</li>
+                <li>L5M 4Z6</li>
+            </ul>
+            <ul class="address">
+                <li class="header">Local Address</li>
+                <li>Apt. #2</li>
+                <li>359 Erb St. W</li>
+                <li>Waterloo, Ontario</li>
+                <li>N2L 1W4</li>
+            </ul>
+        </div>
+        <hr/>
+
+        <div class="inner-pad">
+            <h2>Skills</h2>
+            <ul class="section">
+                <li>Proficient with C, C++, Python, Shell scripting, Haskell,
+                Javascript, Scheme, and Java; as well as several documentation
+                and testing suites respective to those languages.</li>
+
+                <li>Familiar with general database concepts and the SQL-92
+                standard, as well as the MySQL and Oracle implementations.</li>
+
+                <li>Skilled with Linux, Bash and zsh shells, and the UNIX
+                toolchain.</li>
+
+                <li>Working knowledge of several build systems and development
+                environments, including handwritten makefiles, the autotools
+                suite, as well as Eclipse, Qt Creator, KDevelop, and
+                Eric4.</li>
+
+                <li>Well versed in the use of several revision control systems
+                from the command line, namely Subversion, Git, Bazaar, and
+                Darcs, with passing familiarity with RCS and CVS.</li>
+
+                <li>Knowledgable about computer hardware and logic level design
+                and abstraction.</li>
+            </ul>
+
+            <h2>Work Experience</h2>
+
+            <!-- FIXME: Dates must appear before the header because they're floated right.
+            I could float the header left, but this breaks in an <li> environment
+            because floats are taken out of the text flow for positioning. -->
+            <p class="date">New York, NY (September &ndash; December, 2010)</p>
+            <h3>Bloomberg LP: Financial Software Developer</h3>
+            <ul class="section">
+                <li>Internship as part of the Management Information Systems team.</li>
+
+                <li>Designed, tested, and programmed both frontend and backend systems for a search feature to
+                be used in a multi-user, highly concurrent manner, featuring both synchronous and
+                asynchronous modes of operation. This replaced a legacy system and involved writing data
+                migration scripts from an Oracle backend to an in-house proprietary database.</li>
+
+                <li>Replaced a few legacy screens written in a mixture of Fortran and C with variants that used
+                the newer client-server oriented architecture in C++ and Javascript. Also added features and
+                functionality not present in the older screens.</li>
+
+                <li>Responsible for writing scripts to migrate the team source code repository system from RCS
+                to Subversion. Also wrote scripts that wrapped around Subversion to aid in the specific
+                workflow used by the team.</li>
+            </ul>
+
+            <p class="date">Waterloo, ON (October &ndash; December, 2009)</p>
+            <h3>University of Waterloo: Campus Recreation</h3>
+            <p class="section">Intramural Flag Football Referee.</p>
+
+            <p class="date">Mississauga, ON (February &ndash; June, 2009)</p>
+            <h3>St. Joseph Secondary School: Peer As Teacher Helper</h3>
+            <ul class="section">
+                <li>Teaching assistant for a grade 10 computer engineering class, taken as a non-paid co-operative
+                education credit in secondary school.</li>
+
+                <li>Given free reign over many activities, including teaching an entire unit on Lego Mindstorms
+                robots, marking of assignments, and leading classes where the teacher was not present.</li>
+
+                <li>Designed, executed, and marked the culminating assignment worth 10% of the students&rsquo; final
+                grade: to build a servomotor control circuit using two 555 astable timers and a variable
+                resistor to control the desired angle of the servomotor.</li>
+            </ul>
+
+            <p class="date">Mississauga, ON (May 2008)</p>
+            <h3>St. Dunstan Elementary School</h3>
+            <p class="section">Volunteer Flag Football Coach.</p>
+
+            <h2>Open Source Activities</h2>
+            <ul class="section">
+                <li><a href="https://github.com/rraval/wlcc">Currently
+                    implementing an optimizing compiler in Haskell</a><span
+                    class="endnote"> [wlcc]</span>.</li>
+                <li><a href="http://zeroindexed.com/cpp-conway">Wrote a proof
+                    of concept Conway&rsquo;s Game of Life simulator entirely in the
+                    C preprocessor</a><span
+                    class="endnote"> [cpp-conway]</span>.</li>
+                <li><a href="https://github.com/rraval/Rescue">Designed a
+                    r&eacute;sum&eacute; formatting domain specific language implemented in
+                    Haskell</a><span class="endnote"> [rescue]</span>.</li>
+                <li><a href="http://gitorious.org/jockey">Partially completed a
+                    note storing system in Python</a><span
+                    class="endnote"> [jockey]</span>.</li>
+                <li><a href="http://launchpad.net/wicd">Contributed a command
+                    line interface to the wicd network manager for
+                    Linux</a><span class="endnote"> [wicd]</span>.</li>
+                <li><a href="http://code.launchpad.net/~ronuk-raval/+junk/xtest">Wrote
+                    a Python interface to the XTest extension of the X
+                    server</a><span class="endnote"> [xtext]</span>.</li>
+            </ul>
+
+            <h2>Education</h2>
+
+            <p class="date">Waterloo, ON (September 2009 &ndash; Present)</p>
+            <h3>University of Waterloo</h3>
+            <p class="section">
+                Candidate for Bachelor of Computer Science<br/>
+                Honours Computer Science with Digital Hardware Option, Co-op Program
+            </p>
+
+            <h3>Relevant Courses and Assignments</h3>
+            <ul class="section">
+                <li>
+                    <p class="date">University of Waterloo (January &ndash; April, 2010)</p>
+                    <h3>Foundations of Sequential Programs</h3>
+                    <p class="section">Completed an optimizing toolchain that
+                    compiled a C derived language (named WL) to a subset of
+                    the MIPS instruction set, going far beyond course
+                    expectations.</p>
+                </li>
+
+                <li>
+                    <p class="date">University of Waterloo (September &ndash; December, 2009)</p>
+                    <h3>Design, Abstraction, and Implementation</h3>
+                    <p class="section">Accepted in an instructor consent only
+                    advanced level first year computer science course, with a
+                    focus on data structures, formalism, and models.</p>
+                </li>
+
+                <li>
+                    <p class="date">St. Joseph Secondary School (February &ndash; June, 2009)</p>
+                    <h3>Computer and Information Science</h3>
+                    <p class="section">Partially finished a substitute teacher
+                    allocation application as a special project assigned by the
+                    secondary school.</p>
+                </li>
+            </ul>
+
+            <h2>Awards and Achievements</h2>
+            <ul class="section">
+                <li><span class="header">Evaluated &ldquo;Outstanding&rdquo;</span>, the
+                highest possible rating, for internship at Bloomberg LP (<span
+                    class="date">2010</span>).</li> 
+
+                <li><span class="header">Most Valued Member:</span> St. Joseph
+                Robotics Team (<span class="date">2009</span>).</li>
+
+                <li><span class="header">Best Engineered Robot:</span>
+                University of Ontario Institute of Technology Lego Mindstorms
+                SumoBot competition (<span class="date">2008</span>).</li>
+
+                <li><span class="header">Subject Award:</span> Highest mark in
+                Computer Science that year at St. Joseph Secondary School
+                (<span class="date">2007</span>).</li>
+
+                <li><span class="header">Most Dedicated Player:</span> St.
+                Joseph Junior Boys Football team (<span
+                    class="date">2007</span>).</li>
+            </ul>
+        </div>
+
+        <div class="endnote">
+            <hr/>
+
+            <div class="inner-pad">
+                <table>
+                    <tr>
+                        <td>[wlcc]:</td>
+                        <td>https://github.com/rraval/wlcc</td>
+                    </tr>
+                    <tr>
+                        <td>[cpp-conway]:</td>
+                        <td>http://zeroindexed.com/cpp-conway</td>
+                    </tr>
+                    <tr>
+                        <td>[rescue]:</td>
+                        <td>https://github.com/rraval/Rescue</td>
+                    </tr>
+                    <tr>
+                        <td>[jockey]:</td>
+                        <td>http://gitorious.org/jockey</td>
+                    </tr>
+                    <tr>
+                        <td>[wicd]:</td>
+                        <td>http://launchpad.net/wicd</td>
+                    </tr>
+                    <tr>
+                        <td>[xtest]:</td>
+                        <td>http://code.launchpad.net/~ronuk-raval/+junk/xtest</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

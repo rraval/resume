@@ -1,0 +1,304 @@
+% Ronuk Raval's Resume
+% Modified from http://www.mcnabbs.org/andrew/linux/latexres/mcnabb-res.tex
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=0.75in,rmargin=0.75in,
+    headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Ronuk Raval}
+\newcommand{\permaddr}{5999 Cherrywood Pl, Mississauga, ON, L5M 4Z6}
+\newcommand{\tempaddr}{
+    Room 214,
+    Minota Hagey Residence,
+    200 University Avenue West,
+    Waterloo, ON, N2L 3G1
+}
+\newcommand{\phone}{(519) 722-3062}
+\newcommand{\email}{ronuk.raval@gmail.com}
+\newcommand{\website}{http://zeroindexed.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+    \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+\newcommand{\respara}[1]{
+    \vspace{4pt}
+    {\fontfamily{phv} \selectfont \Large #1} \\
+    \vspace{4pt}
+    \hspace{19pt}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+    \respara{#1}
+    \begin{itemize}
+    \vspace{-20pt}
+}{
+    \end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+    \vspace{-4pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resrightitem}[1]{
+    \vspace{-4pt}
+    \item \begin{flushright} #1 \end{flushright}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+    \vspace{-1pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+    %\vspace{-5pt}
+    \item
+    \textbf{#1} \hfill \textit{#2} \\
+    #3
+}
+
+\newcommand{\eduitem}[4]{
+  \item
+    \textbf{#1} \hfill \textit{#2} \\ \mbox{} \hfill \textit{#3} \\
+    #4
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+    \resbigitem{#1}{#2}{#3}
+    \vspace{-2pt}
+    \begin{itemize}
+    \vspace{-1.7em}
+}{
+    \end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+    \resitem{\textbf{#1}}
+    \vspace{-5pt}
+    \begin{itemize}
+}{
+    \end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape Permanent: \permaddr \hfill \phone; \href{mailto:\email}{\email}\\
+    Temporary: \tempaddr}% \hfill Website: \href{\website}{\website}}
+
+\vspace{8 pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ressection}{Skills}
+
+    \resitem{Proficient with C, C++, Python, Shell scripting, Haskell,
+        Javascript, Scheme, and Java; as well as several documentation and testing
+        suites respective to those languages.}
+
+    \resitem{Familiar with general database concepts and the SQL-92 standard, as well
+        as the MySQL and Oracle implementations.}
+
+    \resitem{Skilled with Linux, Bash and zsh shells, and the UNIX toolchain.}
+
+    \resitem{Working knowledge of several build systems and development environments,
+        including handwritten makefiles, the autotools suite, as well as Eclipse,
+        Qt Creator, KDevelop, and Eric4.}
+
+    \resitem{Well versed in the use of several revision control systems from the command
+        line, namely Subversion, Git, Bazaar, and Darcs, with passing familiarity with
+        RCS and CVS.}
+
+    \resitem{Knowledgable about computer hardware and logic level design and abstraction.}
+
+\end{ressection}
+
+\begin{ressection}{Work Experience}
+
+    \begin{ressubsec}{Bloomberg LP: Financial Software Developer}{New York, NY (September -- December, 2010)}
+
+        \ressubitem{Internship as part of the Management Information Systems team.}
+
+        \ressubitem{Designed, tested, and programmed both frontend and backend systems for a search
+            feature to be used in a multi-user, highly concurrent manner, featuring both synchronous
+            and asynchronous modes of operation. This replaced a legacy system and involved writing
+            data migration scripts from an Oracle backend to an in-house proprietary database.}
+
+        \ressubitem{Replaced a few legacy screens written in a mixture of Fortran and C with variants
+            that used the newer client-server oriented architecture in C++ and Javascript. Also added
+            features and functionality not present in the older screens.}
+
+        \ressubitem{Responsible for writing scripts to migrate the team source code repository system
+            from RCS to Subversion. Also wrote scripts that wrapped around Subversion to aid in the
+            specific workflow used by the team.}
+
+    \end{ressubsec}
+
+    \resbigitem{University of Waterloo: Campus Recreation}{Waterloo, ON (October -- December, 2009)}
+        {Intramural Flag Football Referee.}
+
+    \begin{ressubsec}{St. Joseph Secondary School: Peer As Teacher Helper}{Mississauga, ON (February -- June, 2009)}
+
+        \ressubitem{Teaching assistant for a grade 10 computer engineering class,
+            taken as a non-paid co-operative education credit in secondary school.}
+
+        \ressubitem{Given free reign over many activities, including teaching an entire unit
+            on Lego Mindstorms robots, marking of assignments, and leading classes where
+            the teacher was not present.}
+
+        \ressubitem{Designed, executed, and marked the culminating assignment worth 10\% of
+            the students' final grade: to build a servomotor control circuit using two
+            555 astable timers and a variable resistor to control the desired angle of the
+            servomotor.}
+
+    \end{ressubsec}
+
+    \resbigitem{St. Dunstan Elementary School}{Mississauga, ON (May 2008)}
+        {Volunteer Flag Football Coach.}
+
+\end{ressection}
+
+\pagebreak
+
+\begin{ressection}{Open Source Activities}
+    \item[] \hspace{-2.6em} Links to respective source repositories can be found at the bottom of this page.
+
+    \resitem{\href{https://github.com/rraval/wlcc}{Currently implementing an optimizing compiler in
+        Haskell}~\texttt{[wlcc]}.}
+
+    \resitem{\href{http://zeroindexed.com/cpp-conway}{Wrote a proof of concept Conway's Game of Life
+        simulator entirely in the C preprocessor}~\texttt{[cpp-conway]}.}
+
+    \resitem{\href{https://github.com/rraval/Rescue}{Designed a r\'{e}sum\'{e} formatting domain
+        specific language implemented in Haskell.}~\texttt{[rescue]}.}
+
+    \resitem{\href{http://gitorious.org/jockey}{Partially completed a note storing system in
+        Python}~\texttt{[jockey]}.}
+
+    \resitem{\href{http://launchpad.net/wicd}{Contributed a command line interface to the wicd
+        network manager for Linux}~\texttt{[wicd]}.}
+
+    \resitem{\href{http://code.launchpad.net/~ronuk-raval/+junk/xtest}{Wrote a Python interface
+        to the XTest extension of the X server}~\texttt{[xtest]}.}
+
+\end{ressection}
+
+\begin{ressection}{Education}
+
+    \resbigitem{University of Waterloo}{Waterloo, ON (September 2009 -- present)}
+        {Candidate for Bachelor of Computer Science\\Honours Computer Science
+            with Digital Hardware Option, Co-op Program}
+
+    \begin{reslist}{Relevant Courses and Assignments}
+
+        \resbigitem{Foundations of Sequential Programs}{University of Waterloo (January -- April, 2010)}
+            {Completed an optimizing toolchain that compiled a C derived
+            language (named \textit{WL}) to a subset of the MIPS instruction set,
+            going far beyond course expectations.}
+
+        \resbigitem{Design, Abstraction, and Implementation}{University of Waterloo (September -- December, 2009)}
+            {Accepted in an instructor consent only advanced level first year
+            computer science course, with a focus on data structures, formalism,
+            and models.}
+
+        \resbigitem{Computer and Information Science}{St. Joseph Secondary School (February -- June, 2009)}
+            {Partially finished a substitute teacher allocation
+            application as a special project assigned by the secondary school.}
+
+    \end{reslist}
+
+\end{ressection}
+
+
+%\begin{ressection}{Clubs}
+%
+%  \resitem{\textbf{Judo:} Practicing Member. \hfill
+%    \textit{University of Waterloo (January 2010 -- present)}}
+%
+%  \begin{ressubsec}{Robotics}{St Joseph Secondary School (September 2007 -- June 2009)}
+%
+%    \ressubitem{Team lead from September 2008 to June 2009.}
+%
+%    \ressubitem{Wrote driver code for an intelligent sumo robot in a low level C derived language
+%      for the Lego Mindstorms NXT processor.}
+%
+%    \ressubitem{Designed and built two robots for the Canadian Skills Competition in 2008 and 2009.}
+%
+%  \end{ressubsec}
+%
+%  \resitem{\textbf{Football:} Team member. \hfill
+%    \textit{St. Joseph Secondary School (September -- December, 2006 -- 2009)}}
+%
+%\end{ressection}
+
+\begin{ressection}{Awards and Achievements}
+
+    \resitem{\textbf{Evaluated "Outstanding"}, the highest possible rating, for
+        internship at Bloomberg LP (\textit{2010}).}
+
+    \resitem{\textbf{Most Valued Member:} St. Joseph Robotics Team
+        (\textit{2009}).}
+
+    \resitem{\textbf{Best Engineered Robot:} University of Ontario Institute of Technology Lego
+      Mindstorms SumoBot competition (\textit{2008}).}
+
+    \resitem{\textbf{Subject Award:} Highest mark in Computer Science that year
+        at St. Joseph Secondary School (\textit{2007}).}
+
+    \resitem{\textbf{Most Dedicated Player:} St. Joseph Junior Boys Football
+        team (\textit{2007}).}
+
+\end{ressection}
+
+\vfill
+
+\rule{\textwidth}{1pt}
+\begin{tabbing}
+  \texttt{[wlcc]:\ \ \ \ \ \ \ \ https://github.com/rraval/wlcc}\\
+  \texttt{[cpp-conway]: http://zeroindexed.com/cpp-conway}\\
+  \texttt{[rescue]:\ \ \ \ \ \ https://github.com/rraval/Rescue}\\
+  \texttt{[jockey]:\ \ \ \ \ \ http://gitorious.org/jockey}\\
+  \texttt{[wicd]:\ \ \ \ \ \ \ \ http://launchpad.net/wicd}\\
+  \texttt{[xtest]:\ \ \ \ \ \ \ http://code.launchpad.net/{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}ronuk-raval/+junk/xtest}
+\end{tabbing}
+
+\end{document}
